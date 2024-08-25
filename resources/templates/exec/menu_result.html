@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" 
+xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html>
+<head>
+<meta charset="UTF-8">
+<title>検索結果</title>
+</head>
+<body>
+	<div id="header">
+		<h4>1000円ランチシステム</h4>
+		・検索結果
+	</div>
+	<div id="main">
+		日付：<input type="text" name="date" th:value="${date}">>
+		金額（円）：<input type="text" name="total" th:value="${total}">円
+        <!-- 日付：<input type="text" name="date" value=<%= request.getParameter("date") %>>
+         金額（円）：<input type="text" name="total" value=<%= request.getParameter("total") %>>円-->
+    </div>
+	<div id="footer">
+		<a th:href="@{/home}">トップに戻る</a> 
+		<input type="button" onclick="history.back()" value="前に戻る">
+	</div>
+</body>
+</html>
