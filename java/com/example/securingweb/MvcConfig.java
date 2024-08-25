@@ -15,11 +15,12 @@ public class MvcConfig implements WebMvcConfigurer {
 		registry.addViewController("/login").setViewName("login");
 		//jsp
 		registry.addViewController("/list").setViewName("list");
-		registry.addViewController("/menu_csv_input").setViewName("menu_csv_input");
+		registry.addViewController("/exec/menu_csv_input").setViewName("exec/menu_csv_input");
 		registry.addViewController("/menu_csv_regist").setViewName("menu_csv_regist");
 		registry.addViewController("/menu_csv_result").setViewName("menu_csv_result");
-		registry.addViewController("/menu_search").setViewName("menu_search");
-		registry.addViewController("/menu_result").setViewName("menu_result");
+		registry.addViewController("/exec/menu_search").setViewName("exec/menu_search");
+		registry.addViewController("/exec/menu_result").setViewName("exec/menu_result");
+		registry.addViewController("/request/menu_search").setViewName("exec/menu_search");
 	}
 
 }
